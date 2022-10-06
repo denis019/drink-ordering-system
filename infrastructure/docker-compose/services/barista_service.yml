@@ -1,0 +1,8 @@
+version: '3.7'
+services:
+  barista-service:
+    image: com.drink.ordering.system/barista.service:${BARISTA_SERVICE_VERSION}
+    ports:
+      - "8282:8282"
+    networks:
+      - ${GLOBAL_NETWORK}

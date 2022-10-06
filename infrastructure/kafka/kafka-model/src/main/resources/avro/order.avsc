@@ -1,0 +1,35 @@
+{
+    "namespace": "com.drink.ordering.system.infrastructure.kafka.order.avro.model",
+    "type": "record",
+    "name": "OrderAvroModel",
+    "fields": [
+        {
+            "name": "orderId",
+            "type": {
+                "type": "string",
+                "logicalType": "uuid"
+            }
+        },
+        {
+            "name": "drinkType",
+            "type": {
+                "type": "string"
+            }
+        },
+        {
+            "name": "drinkAdditions",
+            "type": {
+                "type": "array",
+                "items": "string"
+            }
+        },
+        {
+            "name": "orderStatus",
+            "type": {
+                  "type": "enum",
+                  "name": "OrderStatus",
+                  "symbols": ["PLACED", "CANCELLED", "FINISHED"]
+               }
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "namespace": "com.drink.ordering.system.infrastructure.kafka.order.avro.model",
+    "type": "record",
+    "name": "BaristaAvroModel",
+    "fields": [
+        {
+            "name": "orderId",
+            "type": {
+                "type": "string",
+                "logicalType": "uuid"
+            }
+        },
+        {
+            "name": "orderPreparationStatus",
+            "type": {
+                  "type": "enum",
+                  "name": "OrderPreparationStatus",
+                  "symbols": ["ORDER_ACCEPTED", "ORDER_CANCELED", "ORDER_FINISHED"]
+               }
+        }
+    ]
+}

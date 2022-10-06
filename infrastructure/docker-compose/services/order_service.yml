@@ -1,0 +1,8 @@
+version: '3.7'
+services:
+  order-service:
+    image: com.drink.ordering.system/order.service:${ORDER_SERVICE_VERSION}
+    ports:
+      - "8181:8181"
+    networks:
+      - ${GLOBAL_NETWORK}
